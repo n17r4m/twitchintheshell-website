@@ -1,0 +1,20 @@
+{
+    "name": "twitchinstallsarchlinux/verification",
+    "description": "A verification script for Twitch Installs Arch Linux to prevent automated voting.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mitchfizz05",
+            "email": "me@mitchfizz05.net"
+        }
+    ],
+    "require": {
+        "google/recaptcha": "^1.1",
+        "vlucas/phpdotenv": "^2.1"
+    },
+	"autoload": {
+		"psr-0": {
+			"TwitchVerification": "includes"
+		}
+	}
+}

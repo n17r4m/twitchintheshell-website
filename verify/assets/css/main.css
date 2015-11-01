@@ -1,0 +1,35 @@
+
+body {
+    background-color: #2a2a2a;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 520px;
+
+    text-align: center;
+}
+
+#username {
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 4px;
+}
+
+.g-recaptcha {
+    display: inline-block;
+    margin: 14px;
+}
+
+h1,h2 {
+    font-family: "open sans", "arial", sans-serif;
+    font-size: 24px;
+
+    color: #5acc10;
+}
+
+p {
+    color: white;
+    font-family: "open sans", "arial", sans-serif;
+    text-shadow: 0 0 1px;
+}
