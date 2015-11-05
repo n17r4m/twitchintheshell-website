@@ -13,7 +13,7 @@
     </head>
     <body>
         <div id="wrapper">
-            <img src="assets/img/logo.png" alt="Twitch Installs Arch Linux"><br>
+            <img src="assets/img/logo.png" alt="Twitch in The Shell"><br>
 
             <form action="verify.php" method="POST">
                 <input type="text" name="username" placeholder="Username" id="username"><br>

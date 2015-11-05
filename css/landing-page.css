@@ -17,12 +17,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .lead {
@@ -31,22 +31,26 @@ h6 {
 }
 
 .flip-clock-wrapper {
-	margin: 0 auto;
-	display: inline-block;
-	text-align: center;
-	width: auto;
-	color: white;
-	padding-top: 10px;
-	padding-bottom: 10px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
 .img-circle {
     border-radius: 50%;
 }
+
 .flip-clock-label {
-	color: white !important ; 
+    color: white !important;
 }
+
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-top: 50px;
+    /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
@@ -62,39 +66,35 @@ h6 {
 
 .intro-message > h1 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
     font-size: 5em;
 }
 
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
     }
-
     .intro-message > h1 {
         font-size: 3em;
     }
-
     ul.intro-social-buttons > li {
         display: block;
         margin-bottom: 20px;
         padding: 0;
     }
-
     ul.intro-social-buttons > li:last-child {
         margin-bottom: 0;
     }
-
     .intro-divider {
         width: 100%;
     }
@@ -137,7 +137,7 @@ h6 {
 
 .banner h2 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
     font-size: 3em;
 }
 
@@ -160,16 +160,14 @@ h6 {
 @media(max-width:767px) {
     .banner h2 {
         margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
         font-size: 3em;
     }
-
     ul.banner-social-buttons > li {
         display: block;
         margin-bottom: 20px;
         padding: 0;
     }
-
     ul.banner-social-buttons > li:last-child {
         margin-bottom: 0;
     }
@@ -182,4 +180,88 @@ footer {
 
 p.copyright {
     margin: 15px 0 0;
+}
+
+#bplist .complete span:nth-of-type(1) {
+    color: #B8B8B8;
+}
+
+#bplist .complete span:nth-of-type(2) {
+    color: #00BF30;
+    text-decoration: none;
+}
+#bplist li>div {
+	margin-right: 5px;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background-size: 12px 12px;
+    background-image:url("/img/unchecked_checkbox.png");
+}
+#bplist .complete>div {
+	margin-right: 5px;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background-size: 12px 12px;
+    background-image:url("/img/checked_checkbox.png");
+}
+
+.meme ,.meme a:link,.meme a:visited 
+{
+	animation: meme 2s ease infinite; 
+
+}
+
+@-webkit-keyframes meme {
+0% {color: #ff0000;}
+10% {color: #ff8000;}
+20% {color: #ffff00;}
+30% {color: #80ff00;}
+40% {color: #00ff00;}
+50% {color: #00ff80;}
+60% {color: #00ffff;}
+70% {color: #0080ff;}
+80% {color: #0000ff;}
+90% {color: #8000ff;}
+100% {color: #ff0080;}
+}
+@-ms-keyframes meme {
+0% {color: #ff0000;}
+10% {color: #ff8000;}
+20% {color: #ffff00;}
+30% {color: #80ff00;}
+40% {color: #00ff00;}
+50% {color: #00ff80;}
+60% {color: #00ffff;}
+70% {color: #0080ff;}
+80% {color: #0000ff;}
+90% {color: #8000ff;}
+100% {color: #ff0080;}
+}
+@-o-keyframes meme {
+0% {color: #ff0000;}
+10% {color: #ff8000;}
+20% {color: #ffff00;}
+30% {color: #80ff00;}
+40% {color: #00ff00;}
+50% {color: #00ff80;}
+60% {color: #00ffff;}
+70% {color: #0080ff;}
+80% {color: #0000ff;}
+90% {color: #8000ff;}
+100% {color: #ff0080;}
+}
+@keyframes meme {
+0% {color: #ff0000;}
+10% {color: #ff8000;}
+20% {color: #ffff00;}
+30% {color: #80ff00;}
+40% {color: #00ff00;}
+50% {color: #00ff80;}
+60% {color: #00ffff;}
+70% {color: #0080ff;}
+80% {color: #0000ff;}
+90% {color: #8000ff;}
+100% {color: #ff0080;}
 }

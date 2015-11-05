@@ -1,5 +1,7 @@
+<!DOCTYPE html>
+<html>
 
-  <head>
+<head>
     <!--pretty much none of this has been formally tested so prepare to find lots of "added features"--!>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +10,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <title>Twitch Installs Arch Linux</title>
+    <title>Twitch In the Shell</title>
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -20,439 +22,614 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/landing-page.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flipclock.min.js"></script>
+</head>
 
-    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="/css/landing-page.css" rel="stylesheet" type="text/css">
-    	
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
-    <script src="/js/jquery.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-
-  </head>
-
-  <body>
-
+<body>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-    <div class="container topnav">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand topnav" href="#">Twitch Installs Arch Linux</a>
-      </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-          <a href="#about">Home</a>
-          </li>
-          <li>
-          <a href="#FAQ">About</a>
-          </li>
-		  <li>
-          <a href="#Commands">Commands</a>
-          </li>
-          <li>
-          <a href="https://twitter.com/twitchshell">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">Twitch in The Shell</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">Home</a>
+                    </li>
+                    <li>
+                        <a href="#FAQ">About</a>
+                    </li>
+                    <li>
+                        <a href="#Commands">Commands</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/twitchshell">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </nav>
-
-
     <!-- Header -->
     <a name="about"></a>
     <div class="intro-header">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="intro-message">
-              <h1><img class="img-responsive" src="img/logo.png" alt="Twitch installs Arch Linux"></h1>
-              <h2>A cooperative text-based horror game</h2>
-              <hr class="intro-divider">
-              <h3>We'll be back soon!</h3>
-              <p>We are running into some difficulties and should be back within the next 24 to 48 hours.</p>
-              <p>Follow us on <a href="https://twitter.com/twitchshell" target="_blank">Twitter</a> for updates!</p>
-              <p> Please be aware that our twitter is different now due to a change in management. </p>
-              <hr class="intro-divider">
-              <ul class="list-inline intro-social-buttons" style="margin-top: 10px;">
-                <li>
-                <a href="https://twitch.tv/twitchinstallsarchlinux" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitch fa-fw"></i> <span class="network-name">Twitch</span></a>
-                </li>
-                <li>
-                <a href="https://twitter.com/twitchshell" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                </li>
-              </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1><img class="img-responsive" src="img/logo.png" alt="Twitch in The Shell"></h1>
+                        <h2>A cooperative text-based horror game</h2>
+                        <hr class="intro-divider">
+                        <h3>We're back!</h3>
+                        <p>Follow us on <a href="https://twitter.com/twitchshell" target="_blank">Twitter</a> for updates!</p>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons" style="margin-top: 10px;">
+                            <li>
+                                <a href="https://twitch.tv/twitchinstallsarchlinux" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitch fa-fw"></i> <span class="network-name">Twitch</span></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/twitchshell" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-
-      </div>
-      <!-- /.container -->
-
+        <!-- /.container -->
     </div>
     <!-- /.intro-header -->
-
     <!-- Page Content -->
-
-    <a  name="FAQ"></a>
+    <a name="FAQ"></a>
     <div class="content-section-a">
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-sm-6">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Twitch Installs Arch Linux</h2>
-            <p class="lead"> Remember how chaotic Twitch Plays Pokemon was? Now we have a much harder challenge: install Arch Linux. Every five seconds, the most popular keystroke in Twitch chat will be entered into an Arch Linux virtual machine.</p>
-            <p class="lead">Up for the challenge?</p>
-          </div>
-          <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-            <img class="img-responsive" src="img/pic1.png" alt="The Twitch installs Arch logo">
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Twitch in The Shell</h2>
+                    <p class="lead"> Remember how chaotic Twitch Plays Pokemon was? Now we have a much harder challenge: install Arch Linux. Every five seconds, the most popular keystroke in Twitch chat will be entered into an Arch Linux virtual machine.</p>
+                    <p class="lead">Up for the challenge?</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/pic1.png" alt="The Twitch in The Shell logo">
+                </div>
+            </div>
         </div>
-
-      </div>
-      <!-- /.container -->
-
+        <!-- /.container -->
     </div>
     <!-- /.content-section-a -->
-
     <div class="content-section-b">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Get Involved!</h2>
-            <p class="lead">Just join our  <a target="_blank" href="http://twitch.tv/twitchinstallsarchlinux">Twitch.tv stream</a> and contribute to the mayhem!</p>
-          </div>
-          <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-            <img class="img-responsive" src="img/pic2.png" alt="Arch Linux boot menu">
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Get Involved!</h2>
+                    <p class="lead">Just join our <a target="_blank" href="http://twitch.tv/twitchinstallsarchlinux">Twitch.tv stream</a> and contribute to the mayhem!</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/pic2.png" alt="Arch Linux boot menu">
+                </div>
+            </div>
         </div>
-
-      </div>
-      <!-- /.container -->
-
+        <!-- /.container -->
     </div>
     <!-- /.content-section-b -->
-
     <div class="content-section-a">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-5 col-sm-6">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Recommended Reading</h2>
-            <p class="lead"><a target="_blank" href="https://wiki.archlinux.org/index.php/Beginners'_guide">Beginners Guide to Arch Linux</a> </p>
-            <p class="lead"><a target="_blank" href="https://wiki.archlinux.org/">Arch Linux wiki</a> </p>
-            <p class="lead"><a target="_blank" href="http://ss64.com/bash/">Comprehensive List of Bash Commands for Linux</a> </p>
-
-
-          </div>
-          <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-            <img class="img-responsive" src="img/tux.png" alt="The tux penguin">
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Recommended Reading</h2>
+                    <p class="lead"><a target="_blank" href="https://wiki.archlinux.org/index.php/Beginners'_guide">Beginners Guide to Arch Linux</a> </p>
+                    <p class="lead"><a target="_blank" href="https://wiki.archlinux.org/">Arch Linux wiki</a> </p>
+                    <p class="lead"><a target="_blank" href="http://ss64.com/bash/">Comprehensive List of Bash Commands for Linux</a> </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/tux.png" alt="The tux penguin">
+                </div>
+            </div>
         </div>
-
-      </div>
-      <!-- /.container -->
-
+        <!-- /.container -->
     </div>
     <!-- /.content-section-a -->
     <div class="content-section-b">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Bonus Points!</h2>
-            <h4 class="lead">Twitch Installs Arch Linux has no rules (except don't do anything illegal).</h4>
-            <p class="lead">However, below are some milestones. When these goals are met, we will raffle off some cool swag!</p>
-            <ul>
-              <li>Boot Arch Linux from the hard disk</li>
-              <li>Write a python 'Hello World!' script</li>
-              <li>Configure a fully working X server</li>
-              <li>Pull up the Twitch screen in the virtual machine!</li>
-              <li>Install a gameboy emulator and start Twitch Installs Arch to Play Pokemon!</li>
-              <li>Install irssi and join the #twitchinstalls coldfront.net chat!</li>
-            </ul>
-          </div>
-          <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-            <img class="img-responsive" src="img/winner.gif" alt="A winner is you gif">
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Bonus Points!</h2>
+                    <h4 class="lead">Twitch in The Shell @ Arch Linux has no rules (except don't do anything illegal).</h4>
+                    <p class="lead">However, below are some milestones we think would be fun to try to reach, and as these goals are met we will raffle off some cool swag! Send us your cool or fun ideas and we might add them below :-)</p>
+                    <ul id="bplist">
+                        <li class="complete">
+                            <div></div><span>Boot Arch Linux from the hard disk</span><span> - Completed 10/31/2015</span></li>
+                        <li class="complete">
+                            <div></div><span>Pull up the Twitch screen in the virtual machine!</span><span> - Completed 11/02/2015</span></li>
+                        <li class="complete">
+                            <div></div><span>Install irssi and join the #twitchinstalls snoonet.org chat!</span><span> - Completed 11/02/2015</span></li>
+                        <li class="complete">
+                            <div></div><span>Install a gameboy emulator and start Twitch Installs Arch to Play Pokemon!</span><span> - Completed 11/03/2015</span></li>
+                        <li class="complete">
+                            <div></div><span class="meme">Install and run <a href="http://memetest.org/">memetest</a>!</span><span> - Completed 11/03/2015</span></li>
+                        <li class="complete">
+                            <div></div><span>Install and play Dwarf Fortress!</span><span> - Completed 11/04/2015</span></li>
+                        <li>
+                            <div></div><span>Install Windows XP and change the text on the Start button to "Kappa"</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Write a python 'Hello World!' script</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Configure a fully working X server</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Run a Bitcoin Miner!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Get on Tor and browse the Onion Network!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Jailbreak the VM! - Bonus points for this one :D</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Play a movie in the terminal and within X!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Write, compile and install a program to compute pi in C++!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Play Twitch Plays Pokemon!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Get on Twitter!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Telnet to a Satellite in Space!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Draw Sierpinski's Triangle!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>SETI @ Home!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Win a Game of Chess against the PC!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Install Festival and upload a message from the stream somewhere!</span><span><!-- - Completed --></span></li>
+                        <li>
+                            <div></div><span>Surprise us in new and unexpected ways :D</span><span><!-- - Completed --></span></li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/winner.gif" alt="A winner is you gif">
+                </div>
+            </div>
         </div>
-
-      </div>
-      <!-- /.container -->
-
+        <!-- /.container -->
     </div>
     <!-- /.content-section-b -->
     <a name="Commands"></a>
     <div class="content-section-a">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-5 col-sm-6">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Commands</h2>
-
-            <div class="table-responsive">
-                <table class="table table-condensed table-hover">
-                    <thead>
-                        <tr>
-                            <th>Command</th>
-                            <th>Key sent</th>
-                        </tr>
-                    </thead>
-                    <tbody id="commands">
-                        <tr><td>[0-9]</td><td>[0-9]</td></tr>
-                        <tr><td>[a-z]</td><td>[a-z]</td></tr>
-                        <tr><td>[A-Z]</td><td>shift-[a-z]</td></tr>
-                        <tr><td>f[1-9]</td><td>f[1-9]</td></tr>
-                        <tr><td>alt-f[1-9]</td><td>alt-f[1-9]</td></tr>
-                        <tr><td>ctrl-[a-z]</td><td>ctrl-[a-z]</td></tr>
-                        <tr><td>escape</td><td>esc</td></tr>
-                        <tr><td>backspace</td><td>backspace</td></tr>
-                        <tr><td>enter</td><td>ret</td></tr>
-                        <tr><td>space</td><td>spc</td></tr>
-                        <tr><td>tab</td><td>tab</td></tr>
-                        <tr><td>up</td><td>up</td></tr>
-                        <tr><td>down</td><td>down</td></tr>
-                        <tr><td>left</td><td>left</td></tr>
-                        <tr><td>right</td><td>right</td></tr>
-                        <tr><td>nop</td><td>nothing</td></tr>
-                        <tr><td>!</td><td>shift-1</td></tr>
-                        <tr><td>at</td><td>shift-2</td></tr>
-                        <tr><td>#</td><td>shift-3</td></tr>
-                        <tr><td>$</td><td>shift-4</td></tr>
-                        <tr><td>%</td><td>shift-5</td></tr>
-                        <tr><td>^</td><td>shift-6</td></tr>
-                        <tr><td>&amp;</td><td>shift-7</td></tr>
-                        <tr><td>*</td><td>shift-8</td></tr>
-                        <tr><td>(</td><td>shift-9</td></tr>
-                        <tr><td>)</td><td>shift-0</td></tr>
-                        <tr><td>-</td><td>minus</td></tr>
-                        <tr><td>_</td><td>shift-minus</td></tr>
-                        <tr><td>'</td><td>apostrophe</td></tr>
-                        <tr><td>"</td><td>shift-apostrophe</td></tr>
-                        <tr><td>dot</td><td>dot</td></tr>
-                        <tr><td>:</td><td>shift-semicolon</td></tr>
-                        <tr><td>;</td><td>semicolon</td></tr>
-                        <tr><td>=</td><td>equal</td></tr>
-                        <tr><td>&gt;</td><td>shift-dot</td></tr>
-                        <tr><td>&lt;</td><td>shift-comma</td></tr>
-                        <tr><td>`</td><td>grave_accent</td></tr>
-                        <tr><td>~</td><td>shift-grave_accent</td></tr>
-                        <tr><td>slash</td><td>slash</td></tr>
-                        <tr><td>?</td><td>shift-slash</td></tr>
-                        <tr><td>backslash</td><td>backslash</td></tr>
-                        <tr><td>[</td><td>bracket_left</td></tr>
-                        <tr><td>]</td><td>bracket_right</td></tr>
-                        <tr><td>{</td><td>shift-bracket_left</td></tr>
-                        <tr><td>}</td><td>shift-bracket_right</td></tr>
-                    </tbody>
-                </table>
-
-                <div class="col-md-13 text-center">
-                    <ul class="pagination pagination-lg commandsPager" id="commandsPager"></ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Commands</h2>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>Key sent</th>
+                                </tr>
+                            </thead>
+                            <tbody id="commands">
+                                <tr>
+                                    <td>[0-9]</td>
+                                    <td>[0-9]</td>
+                                </tr>
+                                <tr>
+                                    <td>[a-z]</td>
+                                    <td>[a-z]</td>
+                                </tr>
+                                <tr>
+                                    <td>[A-Z]</td>
+                                    <td>shift-[a-z]</td>
+                                </tr>
+                                <tr>
+                                    <td>f[1-12]</td>
+                                    <td>f[1-12]</td>
+                                </tr>
+                                <tr>
+                                    <td>alt-f[1-9]</td>
+                                    <td>alt-f[1-9]</td>
+                                </tr>
+                                <tr>
+                                    <td>alt-[tab|space|;|a-z]</td>
+                                    <td>alt-[tab|space|;|a-z]</td>
+                                </tr>
+                                <tr>
+                                    <td>ctrl-[a-z]</td>
+                                    <td>ctrl-[a-z]</td>
+                                </tr>
+                                <tr>
+                                    <td>escape</td>
+                                    <td>escape</td>
+                                </tr>
+                                <tr>
+                                    <td>backspace</td>
+                                    <td>backspace</td>
+                                </tr>
+                                <tr>
+                                    <td>enter|kappa</td>
+                                    <td>enter</td>
+                                </tr>
+                                <tr>
+                                    <td>space</td>
+                                    <td>space</td>
+                                </tr>
+                                <tr>
+                                    <td>tab</td>
+                                    <td>tab</td>
+                                </tr>
+                                <tr>
+                                    <td>up</td>
+                                    <td>up</td>
+                                </tr>
+                                <tr>
+                                    <td>down</td>
+                                    <td>down</td>
+                                </tr>
+                                <tr>
+                                    <td>left</td>
+                                    <td>left</td>
+                                </tr>
+                                <tr>
+                                    <td>right</td>
+                                    <td>right</td>
+                                </tr>
+                                <tr>
+                                    <td>nop</td>
+                                    <td>nothing</td>
+                                </tr>
+                                <tr>
+                                    <td>!</td>
+                                    <td>shift-1</td>
+                                </tr>
+                                <tr>
+                                    <td>at</td>
+                                    <td>shift-2</td>
+                                </tr>
+                                <tr>
+                                    <td>#</td>
+                                    <td>shift-3</td>
+                                </tr>
+                                <tr>
+                                    <td>$</td>
+                                    <td>shift-4</td>
+                                </tr>
+                                <tr>
+                                    <td>%</td>
+                                    <td>shift-5</td>
+                                </tr>
+                                <tr>
+                                    <td>^</td>
+                                    <td>shift-6</td>
+                                </tr>
+                                <tr>
+                                    <td>&amp;</td>
+                                    <td>shift-7</td>
+                                </tr>
+                                <tr>
+                                    <td>*</td>
+                                    <td>shift-8</td>
+                                </tr>
+                                <tr>
+                                    <td>(</td>
+                                    <td>shift-9</td>
+                                </tr>
+                                <tr>
+                                    <td>)</td>
+                                    <td>shift-0</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>minus</td>
+                                </tr>
+                                <tr>
+                                    <td>_</td>
+                                    <td>shift-minus</td>
+                                </tr>
+                                <tr>
+                                    <td>'</td>
+                                    <td>apostrophe</td>
+                                </tr>
+                                <tr>
+                                    <td>"</td>
+                                    <td>shift-apostrophe</td>
+                                </tr>
+                                <tr>
+                                    <td>dot</td>
+                                    <td>dot</td>
+                                </tr>
+                                <tr>
+                                    <td>:</td>
+                                    <td>shift-semicolon</td>
+                                </tr>
+                                <tr>
+                                    <td>;</td>
+                                    <td>semicolon</td>
+                                </tr>
+                                <tr>
+                                    <td>=</td>
+                                    <td>equal</td>
+                                </tr>
+                                <tr>
+                                    <td>&gt;</td>
+                                    <td>shift-dot</td>
+                                </tr>
+                                <tr>
+                                    <td>&lt;</td>
+                                    <td>shift-comma</td>
+                                </tr>
+                                <tr>
+                                    <td>`</td>
+                                    <td>grave_accent</td>
+                                </tr>
+                                <tr>
+                                    <td>~</td>
+                                    <td>shift-grave_accent</td>
+                                </tr>
+                                <tr>
+                                    <td>slash</td>
+                                    <td>slash</td>
+                                </tr>
+                                <tr>
+                                    <td>?</td>
+                                    <td>shift-slash</td>
+                                </tr>
+                                <tr>
+                                    <td>backslash</td>
+                                    <td>backslash</td>
+                                </tr>
+                                <tr>
+                                    <td>[</td>
+                                    <td>bracket_left</td>
+                                </tr>
+                                <tr>
+                                    <td>]</td>
+                                    <td>bracket_right</td>
+                                </tr>
+                                <tr>
+                                    <td>{</td>
+                                    <td>shift-bracket_left</td>
+                                </tr>
+                                <tr>
+                                    <td>}</td>
+                                    <td>shift-bracket_right</td>
+                                </tr>
+                                <tr>
+                                    <td>power_on</td>
+                                    <td>power on the virtual machine</td>
+                                </tr>
+                                <tr>
+                                    <td>boot_cd</td>
+                                    <td>boot from cd</td>
+                                </tr>
+                                <tr>
+                                    <td>boot_drive</td>
+                                    <td>boot from harddrive</td>
+                                </tr>
+                                <tr>
+                                    <td>winkey</td>
+                                    <td>Windows key</td>
+                                </tr>
+                                <tr>
+                                    <td>menu</td>
+                                    <td>right-click</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="col-md-13 text-center">
+                            <ul class="pagination pagination-lg commandsPager" id="commandsPager"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/terminal.svg" alt="Terminal icon">
                 </div>
             </div>
-
-          </div>
-          <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-            <img class="img-responsive" src="img/terminal.svg" alt="Terminal icon">
-          </div>
         </div>
-
-      </div>
-      <!-- /.container -->
-
+        <!-- /.container -->
     </div>
-
-    <a  name="contact"></a>
+    <a name="contact"></a>
     <div class="banner">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>Join the Stream Now!</h2>
-          </div>
-          <div class="col-lg-6">
-            <ul class="list-inline banner-social-buttons">
-              <li>
-              <a href="https://twitch.tv/twitchinstallsarchlinux" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitch fa-fw"></i> <span class="network-name">Twitch</span></a>
-              </li>
-              <li>
-              <a href="https://twitter.com/twitchshell" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-              </li>
-              <!-- 
-              <li>
-              <a href="https://streamtip.com/t/twitchinstallsarchlinux" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-usd fa-fw"></i> <span class="network-name">Tip us</span></a>
-              </li> -->
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Join the Stream Now!</h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://twitch.tv/twitchinstallsarchlinux" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitch fa-fw"></i> <span class="network-name">Twitch</span></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/twitchshell" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        </li>
+                        <!-- 
+          <li>
+          <a href="https://streamtip.com/t/twitchintheshell" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-usd fa-fw"></i> <span class="network-name">Tip us</span></a>
+          </li> -->
+                    </ul>
+                </div>
+            </div>
         </div>
-
-      </div>
-      <!-- /.container -->
-
+        <!-- /.container -->
     </div>
-    <!-- /.banner -->
-
-    <!-- Footer -->
     <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <ul class="list-inline">
-            <li>
-            <a href="#">Home</a>
-            </li>
-            <li class="footer-menu-divider">&sdot;</li>
-            <li>
-            <a href="#FAQ">About</a>
-            </li>
-            <li class="footer-menu-divider">&sdot;</li>
-            <li>
-            <a href="https://twitter.com/twitchshell">Contact</a>
-            </li>
-          </ul>
-          <p class="copyright text-muted small">Copyright &copy; Nicholas Lurski and John Ott 2015. All Rights Reserved. Arch Linux, Twitch, Twitter, and Tux logos are copyright of their respective owners.</p>
+        <div class="row">
+            <div class="col-lg-8">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#FAQ">About</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="https://twitter.com/twitchshell">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <!-- <a href="https://twitchinstalls.com/img/usfull.jpg"> <img class="img-circle" src="img/us.jpg"> </a> -->
+            </div>
         </div>
-		    <div class="col-lg-4">
-    			<!-- <a href="https://twitchinstalls.com/img/usfull.jpg"> <img class="img-circle" src="img/us.jpg"> </a> -->
-        </div>
-
-      </div>
     </div>
-    </footer>
+</footer>
+<!-- /.banner -->
+<!-- Footer -->
 
-    <!-- jQuery -->
+<script>
+$.fn.pageMe = function(opts) {
+    var $this = this,
+        defaults = {
+            perPage: 7,
+            showPrevNext: false,
+            hidePageNumbers: false
+        },
+        settings = $.extend(defaults, opts);
 
-    <script src="js/jquery.js"></script>
-    <script src="js/flipclock.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    var listElement = $this;
+    var perPage = settings.perPage;
+    var children = listElement.children();
+    var pager = $('.commandsPager');
 
-    <script>
-      $.fn.pageMe = function(opts){
-            var $this = this,
-                defaults = {
-                    perPage: 7,
-                    showPrevNext: false,
-                    hidePageNumbers: false
-                },
-                settings = $.extend(defaults, opts);
+    if (typeof settings.childSelector != "undefined") {
+        children = listElement.find(settings.childSelector);
+    }
 
-            var listElement = $this;
-            var perPage = settings.perPage;
-            var children = listElement.children();
-            var pager = $('.commandsPager');
+    if (typeof settings.pagerSelector != "undefined") {
+        pager = $(settings.pagerSelector);
+    }
 
-            if (typeof settings.childSelector!="undefined") {
-                children = listElement.find(settings.childSelector);
-            }
+    var numItems = children.size();
+    var numPages = Math.ceil(numItems / perPage);
 
-            if (typeof settings.pagerSelector!="undefined") {
-                pager = $(settings.pagerSelector);
-            }
+    pager.data("curr", 0);
 
-            var numItems = children.size();
-            var numPages = Math.ceil(numItems/perPage);
+    if (settings.showPrevNext) {
+        $('<li><a href="#" class="prev_link">«</a></li>').appendTo(pager);
+    }
 
-            pager.data("curr",0);
+    var curr = 0;
+    while (numPages > curr && (settings.hidePageNumbers == false)) {
+        $('<li><a href="#" class="page_link">' + (curr + 1) + '</a></li>').appendTo(pager);
+        curr++;
+    }
 
-            if (settings.showPrevNext){
-                $('<li><a href="#" class="prev_link">«</a></li>').appendTo(pager);
-            }
+    if (settings.showPrevNext) {
+        $('<li><a href="#" class="next_link">»</a></li>').appendTo(pager);
+    }
 
-            var curr = 0;
-            while(numPages > curr && (settings.hidePageNumbers==false)){
-                $('<li><a href="#" class="page_link">'+(curr+1)+'</a></li>').appendTo(pager);
-                curr++;
-            }
+    pager.find('.page_link:first').addClass('active');
+    pager.children().eq(1).addClass("active");
 
-            if (settings.showPrevNext){
-                $('<li><a href="#" class="next_link">»</a></li>').appendTo(pager);
-            }
+    children.hide();
+    children.slice(0, perPage).show();
 
-            pager.find('.page_link:first').addClass('active');
-            pager.children().eq(1).addClass("active");
+    pager.find('li .page_link').click(function() {
+        var clickedPage = $(this).html().valueOf() - 1;
+        goTo(clickedPage, perPage);
+        return false;
+    });
+    pager.find('li .prev_link').click(function() {
+        if (pager.data("curr") >= 1) {
+            previous();
+        }
+        return false;
+    });
+    pager.find('li .next_link').click(function() {
+        if (pager.data("curr") < (numPages - 1)) {
+            next();
+        }
+        return false;
+    });
 
-            children.hide();
-            children.slice(0, perPage).show();
+    function previous() {
+        var goToPage = parseInt(pager.data("curr")) - 1;
+        goTo(goToPage);
+    }
 
-            pager.find('li .page_link').click(function(){
-                var clickedPage = $(this).html().valueOf()-1;
-                goTo(clickedPage,perPage);
-                return false;
-            });
-            pager.find('li .prev_link').click(function(){
-                if (pager.data("curr")>=1) {
-                    previous();
-                }
-                return false;
-            });
-            pager.find('li .next_link').click(function(){
-                if (pager.data("curr")<(numPages-1)) {
-                    next();
-                }
-                return false;
-            });
+    function next() {
+        goToPage = parseInt(pager.data("curr")) + 1;
+        goTo(goToPage);
+    }
 
-            function previous(){
-                    var goToPage = parseInt(pager.data("curr")) - 1;
-                    goTo(goToPage);
-            }
+    function goTo(page) {
+        var startAt = page * perPage,
+            endOn = startAt + perPage;
 
-            function next(){
-                    goToPage = parseInt(pager.data("curr")) + 1;
-                    goTo(goToPage);
-            }
+        if (page >= 1 || page < (numPages - 1)) {
+            children.css('display', 'none').slice(startAt, endOn).show();
+            pager.data("curr", page);
+            pager.children().removeClass("active");
+            pager.children().eq(page + 1).addClass("active");
+        }
+    }
+};
 
-            function goTo(page){
-                var startAt = page * perPage,
-                    endOn = startAt + perPage;
-
-                if (page>=1 || page<(numPages-1)) {
-                    children.css('display','none').slice(startAt, endOn).show();
-                    pager.data("curr",page);
-                    pager.children().removeClass("active");
-                    pager.children().eq(page+1).addClass("active");
-                }
-            }
-        };
-
-        $(document).ready(function(){
-          $('#commands').pageMe({pagerSelector:'#commandsPager',showPrevNext:true,hidePageNumbers:false,perPage:20});
-        });
-    </script>
-  <script type="text/javascript">
-/* <![CDATA[ */
-(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
-/* ]]> */
+$(document).ready(function() {
+    $('#commands').pageMe({
+        pagerSelector: '#commandsPager',
+        showPrevNext: true,
+        hidePageNumbers: false,
+        perPage: 20
+    });
+});
 </script>
+<!--<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    try {
+        var s, a, i, j, r, c, l = document.getElementsByTagName("a"),
+            t = document.createElement("textarea");
+        for (i = 0; l.length - i; i++) {
+            try {
+                a = l[i].getAttribute("href");
+                if (a && a.indexOf("/cdn-cgi/l/email-protection") > -1 && (a.length > 28)) {
+                    s = '';
+                    j = 27 + 1 + a.indexOf("/cdn-cgi/l/email-protection");
+                    if (a.length > j) {
+                        r = parseInt(a.substr(j, 2), 16);
+                        for (j += 2; a.length > j && a.substr(j, 1) != 'X'; j += 2) {
+                            c = parseInt(a.substr(j, 2), 16) ^ r;
+                            s += String.fromCharCode(c);
+                        }
+                        j += 1;
+                        s += a.substr(j, a.length - j);
+                    }
+                    t.innerHTML = s.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                    l[i].setAttribute("href", "mailto:" + t.value);
+                }
+            } catch (e) {}
+        }
+    } catch (e) {}
+})();
+/* ]]> */
+</script>-->
 </body>
+
+</html>
